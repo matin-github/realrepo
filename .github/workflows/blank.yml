@@ -27,7 +27,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: realrepo
+        ECR_REPOSITORY: reporealtime
         IMAGE_TAG: latest1
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITRY:$IMAGE_TAG .
