@@ -28,7 +28,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: realrepo
-        IMAGE_TAG: ${{ steps.increment-git-tag.outputs.git-tag }}
+        IMAGE_TAG: latest1
       run: |
         docker build -t ubuntu .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
